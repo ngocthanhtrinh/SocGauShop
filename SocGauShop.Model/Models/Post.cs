@@ -1,4 +1,5 @@
 ﻿using SocGauShop.Model.Abstract;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -32,5 +33,7 @@ namespace SocGauShop.Model.Models
 
         [ForeignKey("CategoryID")]
         public virtual PostCategory Postcategory { set; get; }
+
+        public virtual IEnumerable<PostTag> PostTags { set; get; }
     }
 }

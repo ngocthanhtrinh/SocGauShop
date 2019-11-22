@@ -41,7 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PostService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SocGauShop.Common\SocGauShop.Common.csproj">
+      <Project>{d7dcf651-8afd-4818-aa96-563195174dde}</Project>
+      <Name>SocGauShop.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocGauShop.Data\SocGauShop.Data.csproj">
+      <Project>{7236dc0c-6fa0-43fd-be56-87585a0f9237}</Project>
+      <Name>SocGauShop.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocGauShop.Model\SocGauShop.Model.csproj">
+      <Project>{32d42a71-aaeb-49f5-9b07-f6126e5730a3}</Project>
+      <Name>SocGauShop.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
