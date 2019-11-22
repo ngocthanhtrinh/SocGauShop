@@ -3,8 +3,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SocGauShop.Model.Models
 {
-    [Table("Sliders")]
-    public class Slider
+    [Table("Slides")]
+    public class Slide
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

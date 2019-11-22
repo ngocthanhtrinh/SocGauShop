@@ -221,7 +221,7 @@
                 .Index(t => t.TagID);
             
             CreateTable(
-                "dbo.Sliders",
+                "dbo.Slides",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
@@ -263,7 +263,7 @@
                 .PrimaryKey(t => t.ID);
             
             CreateTable(
-                "dbo.VisitorStatics",
+                "dbo.VisitorStatistics",
                 c => new
                     {
                         ID = c.Int(nullable: false, identity: true),
@@ -294,10 +294,10 @@
             DropIndex("dbo.OrderDetails", new[] { "ProductID" });
             DropIndex("dbo.OrderDetails", new[] { "OrderID" });
             DropIndex("dbo.Menus", new[] { "GroupID" });
-            DropTable("dbo.VisitorStatics");
+            DropTable("dbo.VisitorStatistics");
             DropTable("dbo.SystemConfigs");
             DropTable("dbo.SupportOnlines");
-            DropTable("dbo.Sliders");
+            DropTable("dbo.Slides");
             DropTable("dbo.ProductTags");
             DropTable("dbo.Tags");
             DropTable("dbo.PostTags");

@@ -13,7 +13,7 @@ namespace SocGauShop.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201911211023433_InitialDB"; }
+            get { return "201911220453227_InitialDB"; }
         }
         
         string IMigrationMetadata.Source

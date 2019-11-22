@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SocGauShop.Model.Models
 {
-    [Table("VisitorStatics")]
-    public class VisitorStatic
+    [Table("VisitorStatistics")]
+    public class VisitorStatistic
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
