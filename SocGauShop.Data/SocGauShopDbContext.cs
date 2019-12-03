@@ -1,4 +1,5 @@
-﻿using SocGauShop.Model.Models;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using SocGauShop.Model.Models;
 using System.Data.Entity;
 
 namespace SocGauShop.Data
@@ -28,10 +29,13 @@ namespace SocGauShop.Data
         public DbSet<SystemConfig> SystemConfigs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatics { set; get; }
-
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        public DbSet<Error> Errors { set; get; }
+        protected override void OnModelCreating(DbModelBuilder builder)
         {
-            base.OnModelCreating(modelBuilder);
+            builder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId }).ToTable("ApplicationUserRoles");
+            builder.Entity<IdentityUserLogin>().HasKey(i => i.UserId).ToTable("ApplicationUserLogins");
+            builder.Entity<IdentityRole>().ToTable("ApplicationRoles");
+            builder.Entity<IdentityUserClaim>().HasKey(i => i.UserId).ToTable("ApplicationUserClaims");
         }
     }
 }
